@@ -5,7 +5,16 @@
 (function(scope){
 
 	var replaceIndex = function(conf, indexes) {
-		return conf.replace(/\{([^\}]+)\}/g, indexes["$1"])
+		var matches = conf.match(/\{([^\}]+)\}/g);
+		if (matches) {
+			for (var i = 0, match, key; match = matches[i]; i++) {
+				key = match.substring(1, match.length-1)
+				if (key in indexes) {
+					conf = conf.replace(match, indexes[key])
+				}
+			}
+		}
+		return conf
 	}
 
 	var jsongen = function(conf, indexes) {

@@ -26,10 +26,6 @@
 		return result
 	}
 
-	var replacePath = function(conf, indexes) {
-		return conf.replace(/\{([^\}]+)\}/g, indexes["$1"])
-	}
-
 	var structGen = function(conf) {
 		var type = Object.prototype.toString.call(conf)
 		if (type == "[object String]") {
