@@ -1,0 +1,17 @@
+{
+  "name": "jsongen",
+  "version": "0.0.1",
+  "description": "Generate json from configuration",
+  "author": "Benoît Baliguet <benoit.baliguet@gmail.com>",
+  "devDependencies": {
+    "test": ""
+  },
+  "node": "~0.10.x",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbaliguet/jsongen"
+  },
+  "scripts": {
+    "test": "node test/jsongen.js"
+  }
+}

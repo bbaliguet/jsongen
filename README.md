@@ -1,0 +1,1 @@
+Build JSON from configuration object.
