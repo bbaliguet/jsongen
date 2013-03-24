@@ -5,10 +5,10 @@
 (function(exports) {
 
 	var replaceIndex = function(conf, indexes) {
-		var matches = conf.match(/\{([^\}]+)\}/g);
+		var matches = conf.match(/\{index\:([^\}]+)\}/g);
 		if (matches) {
 			for (var i = 0, match, key; match = matches[i]; i++) {
-				key = match.substring(1, match.length - 1)
+				key = match.substring(7, match.length - 1)
 				if (key in indexes) {
 					conf = conf.replace(match, indexes[key])
 				}

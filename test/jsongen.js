@@ -7,7 +7,7 @@ exports['test jsongen module'] = function(assert) {
 		param: "str:test"
 	}), '{"param":"test"}')
 	assert.equal(jsongen({
-		param: ["2", "index", "str:test{index}"]
+		param: ["2", "key", "str:test{index:key}"]
 	}), '{"param":["test0","test1"]}')
 }
 
